@@ -38,10 +38,14 @@ function dconvert()
 
 function dpaste()
 {
-  
+  var date = document.getElementById("dateinput");
+  date.select();
+  document.execCommand('paste');
 }
 
 function dcopy()
 {
-  
+   var csvdate = document.getElementById("dateoutput");
+  csvdate.select();
+  document.execCommand('copy');
 }
