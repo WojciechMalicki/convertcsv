@@ -1,3 +1,5 @@
+document.designMode = 'on';
+
 var results = "Nazwa użytkownika,Imię,Nazwisko,Nazwa wyświetlana\n";
 
 String.prototype.escapeDiacritics = function()
@@ -13,7 +15,7 @@ String.prototype.escapeDiacritics = function()
         .replace(/ź/g, 'z').replace(/Ź/g, 'Z');
 }
 
-function adddate(line)
+function addDate(line)
 {
   var name = line.split(",");
   var domena = document.getElementById("domena").value;
@@ -22,17 +24,14 @@ function adddate(line)
       domena = '@' + domena;
     }
   var username = name[0] + name[1] + domena;
-  username.escapeDiacritics();
-  return username.toLowerCase() + ',' + name[0] + ',' + name[1] + ',' + name[0] + ' ' + name[1]  + '\n'; 
+  username = username.escapeDiacritics();
+  results = results + username.toLowerCase() + ',' + name[0] + ',' + name[1] + ',' + name[0] + ' ' + name[1]  + '\n'; 
 }
 
 function dconvert()
 {
   var date = document.getElementById("dateinput").value.split('\n');
-  
-  
-  date.forEach(adddate);
-  
+  date.forEach(addDate);
   var date = document.getElementById("dateoutput").innerHTML = results;
   
 }
