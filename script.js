@@ -11,9 +11,12 @@ String.prototype.escapeDiacritics = function()
         .replace(/ź/g, 'z').replace(/Ź/g, 'Z');
 }
 
-function adddate()
+function adddate(line)
 {
-  
+  var name = line.split(",");
+  var domena = document.getElementById("domena").value;
+  if (domena[0] != '@')
+  var username = 
 }
 
 function dconvert()
