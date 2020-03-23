@@ -1,3 +1,5 @@
+var results = "Nazwa użytkownika,Imię,Nazwisko,Nazwa wyświetlana\n";
+
 String.prototype.escapeDiacritics = function()
 {
     return this.replace(/ą/g, 'a').replace(/Ą/g, 'A')
@@ -16,18 +18,22 @@ function adddate(line)
   var name = line.split(",");
   var domena = document.getElementById("domena").value;
   if (domena[0] != '@')
-  var username = 
+    {
+      domena = '@' + domena;
+    }
+  var username = name[0] + name[1] + domena;
+  username.escapeDiacritics();
+  return username.toLowerCase() + ',' + name[0] + ',' + name[1] + ',' + name[0] + ' ' + name[1]  + '\n'; 
 }
 
 function dconvert()
 {
   var date = document.getElementById("dateinput").value.split('\n');
-  var results = "Nazwa użytkownika,Imię,Nazwisko,Nazwa wyświetlana\n";
   
   
-  document.getElementById("dateoutput").innerHTML = results + date[4] + date[3];
+  date.forEach(adddate);
   
-  
+  var date = document.getElementById("dateoutput").innerHTML = results;
   
 }
 
