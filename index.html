@@ -13,15 +13,28 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <h1>Hi there!</h1>
-    
+    <h1>Konwertowanie danych do Office 365</h1>
+    <h2>
+      Dane nie są wysyłane na żaden serwer
+    </h2>
     <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
+      <button onclick="paste()">
+        Wklej
+      </button>
+      <textarea cols="40" rows="30" id="dateinput" placeholder="wklej imiona i nazwiska (każdw w osobnej linijce)">
+      </textarea>
+      <button onclick="convert()">
+        Konwertuj
+      </button>
+      <hr>
+    <textarea cols="40" rows="30" id="dateinput" placeholder="wklej imiona i nazwiska (każdw w osobnej linijce)">
+      </textarea>
+      <button onclick="convert()">
+        Konwertuj
+      </button>
     </p>
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
+   
+    
   </body>
 </html>
