@@ -25,11 +25,13 @@ function addDate(line)
     }
   var username = name[0] + name[1] + domena;
   username = username.escapeDiacritics();
+  username = username.replace('-', '');
   results = results + username.toLowerCase() + ',' + name[0] + ',' + name[1] + ',' + name[0] + ' ' + name[1]  + '\n'; 
 }
 
 function dconvert()
 {
+  results = "";
   var date = document.getElementById("dateinput").value.split('\n');
   date.forEach(addDate);
   var date = document.getElementById("dateoutput").innerHTML = results;
