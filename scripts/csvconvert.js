@@ -26,9 +26,12 @@ String.prototype.escapeDiacritics = function() {
 function addDate(line) {
   var name = line.split(",");
   var domena = document.getElementById("domena").value;
+  domena = domena.trim();
   if (domena[0] != "@") {
     domena = "@" + domena;
   }
+  name[0] = name[0].trim();
+  name[1] = name[1].trim();
   var username = name[0] + name[1] + domena;
   username = username.escapeDiacritics();
   username = username.replace("-", "");
@@ -51,7 +54,7 @@ function dconvert() {
     "Nazwa użytkownika,Imię,Nazwisko,Nazwa wyświetlana,Stanowisko,Dział,Numer biura,Telefon w biurze,Telefon komórkowy,Numer faksu,Adres,Miejscowość,Województwo,Kod pocztowy,Kraj lub region\n";
   var date = document.getElementById("dateinput").value.split("\n");
   date.forEach(addDate);
-  var date = (document.getElementById("dateoutput").innerHTML = results);
+  document.getElementById("dateoutput").innerHTML = results;
 }
 
 function dpaste() {
