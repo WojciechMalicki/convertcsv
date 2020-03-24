@@ -26,7 +26,6 @@ String.prototype.escapeDiacritics = function() {
 function addDate(line) {
   var name = line.split(",");
   var domena = document.getElementById("domena").value;
-  domena = domena.trim();
   if (domena[0] != "@") {
     domena = "@" + domena;
   }
