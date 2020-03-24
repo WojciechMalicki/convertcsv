@@ -2,35 +2,47 @@
 <html lang="pl">
   <head>
     <title>Tworzenie danych</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
-    
+    <link rel="stylesheet" href="/css/style.css" />
+
     <!-- import the webpage's javascript file -->
     <script src="/scripts/csvconvert.js" defer charset="utf-8"></script>
-  </head>  
+  </head>
   <body>
     <div>
-    <h1>Tworzenie danych kont do Office 365</h1>
-    <h2>
-      Dane nie są wysyłane na żaden serwer
-    </h2>
-    domena: <input type="text" id="domena" placeholder="wpisz ...@twojadomena.onmicrosoft.com"/>
-      <textarea placeholder="wklej imiona i nazwiska (każdą parę w osobnej linijce, imię i nazwisko odzielone przecinkiem bez spacji)" cols="60" rows="30" id="dateinput" ></textarea>
+      <h1>Tworzenie danych kont do Office 365</h1>
+      <h2>
+        Dane nie są wysyłane na żaden serwer
+      </h2>
+      domena:
+      <input
+        type="text"
+        id="domena"
+        placeholder="wpisz ...@twojadomena.onmicrosoft.com"
+      />
+      <textarea
+        placeholder="wklej imiona i nazwiska (każdą parę w osobnej linijce, imię i nazwisko odzielone przecinkiem bez spacji)"
+        cols="60"
+        rows="30"
+        id="dateinput"
+      ></textarea>
       <button onclick="dconvert()">
         Stwórz
       </button>
-      <hr>
-    <textarea placeholder="tu pojawi się wynik..." cols="60" rows="30" id="dateoutput"></textarea>
+      <hr />
+      <textarea
+        placeholder="tu pojawi się wynik..."
+        cols="60"
+        rows="30"
+        id="dateoutput"
+      ></textarea>
       <button onclick="dcopy()">
         Kopiuj do schowka
       </button>
     </div>
-
-   
-    
   </body>
 </html>
