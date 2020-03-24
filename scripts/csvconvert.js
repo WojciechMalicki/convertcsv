@@ -47,7 +47,8 @@ function addDate(line) {
 }
 
 function dconvert() {
-  results = "Nazwa użytkownika,Imię,Nazwisko,Nazwa wyświetlana,Stanowisko,Dział,Numer biura,Telefon w biurze,Telefon komórkowy,Numer faksu,Adres,Miejscowość,Województwo,Kod pocztowy,Kraj lub region\n";
+  results =
+    "Nazwa użytkownika,Imię,Nazwisko,Nazwa wyświetlana,Stanowisko,Dział,Numer biura,Telefon w biurze,Telefon komórkowy,Numer faksu,Adres,Miejscowość,Województwo,Kod pocztowy,Kraj lub region\n";
   var date = document.getElementById("dateinput").value.split("\n");
   date.forEach(addDate);
   var date = (document.getElementById("dateoutput").innerHTML = results);
