@@ -43,7 +43,7 @@ function addDate(line) {
     name[0] +
     " " +
     name[1] +
-    "\n";
+    ",,,,,,,,,,,\n";
 }
 
 function dconvert() {
