@@ -1,4 +1,4 @@
-document.designMode = "on";
+//document.designMode = "on";
 
 var results = "";
 
