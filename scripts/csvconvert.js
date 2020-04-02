@@ -30,7 +30,9 @@ function addDate(line) {
     domena = "@" + domena;
   }
   name[0] = name[0].trim();
+  name[0] = name[0].replace(" ","");
   name[1] = name[1].trim();
+  name[1] = name[1].replace(" ","");
   var username = name[0] + name[1] + domena;
   username = username.escapeDiacritics();
   username = username.replace("-", "");
